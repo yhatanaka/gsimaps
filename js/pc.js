@@ -320,7 +320,7 @@ CONFIG.UI.MENU = [
     title : "",
     icon : "",
     class : "gsi-header-tool-vectorlogo-icon",
-    description : "地理院地図Vector（仮称）へジャンプ"
+    description : "地理院地図Vectorへジャンプ"
   }
 
 ];
