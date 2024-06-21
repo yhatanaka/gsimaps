@@ -797,6 +797,36 @@
                   "html": "<div class=\"gsi_layerinfo_subtitle\">(沖縄県_2019年6月作成)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/Laser_map.html\">解説</a></div><br>※注意<br>地形情報は作成年度の情報です。<br>詳細は解説をご確認ください。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
                 }
               ]
+            },
+            {
+              "type": "LayerGroup",
+              "title": "地形分類（白黒）",
+              "html": "<div class='layer_text'><p>地形分類を白黒表示しています。白黒コピー用の教材作成に活用できます。</p></div>",
+              "toggleall": false,
+              "entries": [
+                {
+                  "type": "Layer",
+                  "id": "landform1_mono",
+                  "title": "自然地形（白黒）",
+                  "url": "https://maps.gsi.go.jp/xyz/landform1_mono/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "toggleall": false,
+                  "minZoom": 5,
+                  "maxZoom": 16,
+                  "html": "<div class='layer_text'><p>地形分類（自然地形）を白黒表示しています。白黒コピー用の教材作成に活用できます。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/landform1_mono_legend.pdf\">凡例を表示</a></div><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/gsimaps_BWmap.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                },
+                {
+                  "type": "Layer",
+                  "id": "landform2_mono",
+                  "title": "人工改変地形（白黒）",
+                  "url": "https://maps.gsi.go.jp/xyz/landform2_mono/{z}/{x}/{y}.png",
+                  "cocotile": true,
+                  "toggleall": false,
+                  "minZoom": 14,
+                  "maxZoom": 16,
+                  "html": "<div class='layer_text'><p>地形分類（人工改変地形）を白黒表示しています。白黒コピー用の教材作成に活用できます。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/landform2_mono_legend.pdf\">凡例を表示</a></div><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/gsimaps_BWmap.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+                }
+              ]
             }
           ]
         },
