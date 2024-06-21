@@ -372,7 +372,9 @@ CONFIG.BLENDLAYERS = {
   "relief": true,
   "relief_free": true,
   "swale": true,
-  "gsjGeomap_seamless200k_v2": true
+  "gsjGeomap_seamless200k_v2": true,
+  "landform1_mono": true,
+  "landform2_mono": true
 };
 
 
