@@ -16,6 +16,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和6年豊後水道の地震",
+              "toggleall": false,
+              "src": "./layers_20240419bungosuido.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "令和6年(2024年)能登半島地震",
               "toggleall": false,
               "src": "./layers_20240102noto.txt"
