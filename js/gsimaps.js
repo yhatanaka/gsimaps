@@ -1575,7 +1575,7 @@ GSI.Links.getURL = function (pageStateManager, id, center, z, bounds) {
   }
 
   else if (id == 'ucodehref') {
-    return 'http://ucopendb.gsi.go.jp/ucode_app/logical_code/ucode_disp.php?lat=' + center.lat + '&lng=' + center.lng + '&zoom=' + z;
+    return 'https://www.gsi.go.jp/sokuchikijun/uPlace.html';
   }
 
   else if (id == 'gsivector') {
@@ -51981,13 +51981,13 @@ GSI.GSIMaps = L.Evented.extend({
       case "placecode":
         var a = $("<a>");
         $("body").append(a);
-        a.attr({ "href": "http://ucopendb.gsi.go.jp/ucode_app/logical_code/ucode_disp.php", "target": "_blank" })
-          .on('click',L.bind(function (a) {
-            var map = this._mainMap.getMap();
-            var center = map.getCenter();
-            var z = map.getZoom();
+        a.attr({ "href": "https://www.gsi.go.jp/sokuchikijun/uPlace.html", "target": "_blank" })
+           .on('click',L.bind(function (a) {
+          //   var map = this._mainMap.getMap();
+          //   var center = map.getCenter();
+          //   var z = map.getZoom();
 
-            var url = 'http://ucopendb.gsi.go.jp/ucode_app/logical_code/ucode_disp.php?lat=' + center.lat + '&lng=' + center.lng + '&zoom=' + z;
+            var url = 'https://www.gsi.go.jp/sokuchikijun/uPlace.html';
             a.attr({ "href": url });
           }, this, a));
 
