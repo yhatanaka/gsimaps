@@ -4427,6 +4427,15 @@
                   "entries": [
                     {
                       "type": "Layer",
+                      "id": "fgd_update_2024_07",
+                      "title": "7月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_update_2024_07/{z}/{x}/{y}.png",
+                      "cocotile": true,
+                      "minZoom": 4,
+                      "maxZoom": 12
+                    },
+                    {
+                      "type": "Layer",
                       "id": "fgd_update_2024_04",
                       "title": "4月更新",
                       "url": "https://maps.gsi.go.jp/xyz/fgd_update_2024_04/{z}/{x}/{y}.png",
@@ -4866,15 +4875,33 @@
               "toggleall": false,
               "entries": [
               	{
-                  "type": "Layer",
-                  "id": "fgd_dem1a_area",
-                  "title": "1mメッシュDEM（航空レーザ測量）の<br>提供地域と作業年度",
-                  "url": "https://maps.gsi.go.jp/xyz/fgd_dem1a_area/{z}/{x}/{y}.geojson",
-                  "cocotile": true,
-                  "minZoom": 5,
-                  "maxZoom": 14,
-                  "maxNativeZoom": 2,
-                  "html": "<div class=\"gsi_layerinfo_title\">1ｍメッシュDEM（航空レーザ測量）<br>提供範囲と作業年度</div><div class=\"gsi_layerinfo_subtitle\">（基盤地図情報数値標高モデル）</div><div class=\"gsi_layerinfo_kaisetu\"><div>航空レーザ測量により整備した1mメッシュDEMの提供範囲と作業年度を表示します。<br><ul><li>ズーム：5～14<br>1mメッシュDEMの提供範囲と作業年度</li></ul></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
+                  "type": "LayerGroup",
+                  "title": "1ｍメッシュDEM（航空レーザ測量）の<br>提供地域と作業年度",
+                  "id": "fgd_dem1a_area_dtil",
+                  "toggleall": false,
+                  "html": "<div class=\"gsi_layerinfo_title\">1ｍメッシュDEM（航空レーザ測量）<br>提供範囲と作業年度</div><div class=\"gsi_layerinfo_subtitle\">（基盤地図情報数値標高モデル）</div><div class=\"gsi_layerinfo_kaisetu\"><div>航空レーザ測量により整備した1mメッシュDEMの提供範囲と作業年度を表示します。<br><ul><li>ズーム：5～11<br>1mメッシュDEMの提供範囲（概略）</li><li>ズーム：12～14<br>1mメッシュDEMの提供範囲（詳細）と作業年度等</li></ul></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>",
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem1a_area_dtil_5",
+                      "title": "提供範囲",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem1a_area_dtil/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 5,
+                      "maxZoom": 11,
+                      "maxNativeZoom": 5
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem1a_area_dtil_12",
+                      "title": "提供範囲と作業年度",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem1a_area_dtil/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 12,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 12
+                    }
+                  ]
                 },
                 {
                   "type": "LayerGroup",
@@ -4924,6 +4951,23 @@
                   "url": "https://maps.gsi.go.jp/xyz/fgd_dem10a_area/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(10mメッシュDEM（火山基本図）)</div><div class=\"gsi_layerinfo_kaisetu\"><div>火山基本図の等高線データを基に作成した10mメッシュDEMの提供範囲</div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
+                },
+                {
+                  "type": "LayerGroup",
+                  "title": "2024年7月更新",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem1a_update_2024_07",
+                      "title": "1ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem1a_update_2024_07/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 5,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    }
+                  ]
                 },
                 {
                   "type": "LayerGroup",
