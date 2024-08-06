@@ -601,6 +601,12 @@
           "entries": [
             {
               "type": "LayerGroup",
+              "title": "令和6年7月25日からの大雨",
+              "toggleall": false,
+              "src": "./layers_20240726rain.txt"
+            },
+            {
+              "type": "LayerGroup",
               "title": "令和5年6月29日からの大雨",
               "toggleall": false,
               "src": "./layers_20230629rain.txt"
