@@ -42233,24 +42233,26 @@ GSI.SakuzuListItem = L.Evented.extend({
       }
     }
 
-    var iconUrl = options.icon.options.iconUrl;
-    var iconSize = options.icon.options.iconSize;
-    var iconAnchor = options.icon.options.iconAnchor;
-    var html = options.icon.options.html;
-    if (options.icon.options.className == 'gsi-div-icon') {
-      result.properties["_markerType"] = "DivIcon";
-      result.properties["_html"] = (html || html != '' ? html : '　');
-    }
-    else {
-      result.properties["_markerType"] = "Icon";
-      result.properties["_iconUrl"] = iconUrl;
-    }
-    result.properties["_iconSize"] = iconSize;
-    result.properties["_iconAnchor"] = iconAnchor;
+    if (typeof options.icon !== 'undefined') {
+      var iconUrl = options.icon.options.iconUrl;
+      var iconSize = options.icon.options.iconSize;
+      var iconAnchor = options.icon.options.iconAnchor;
+      var html = options.icon.options.html;
+      if (options.icon.options.className == 'gsi-div-icon') {
+        result.properties["_markerType"] = "DivIcon";
+        result.properties["_html"] = (html || html != '' ? html : '　');
+      }
+      else {
+        result.properties["_markerType"] = "Icon";
+        result.properties["_iconUrl"] = iconUrl;
+      }
+      result.properties["_iconSize"] = iconSize;
+      result.properties["_iconAnchor"] = iconAnchor;
 
-    if (!result.properties["_iconSize"]) delete result.properties["_iconSize"];
+      if (!result.properties["_iconSize"]) delete result.properties["_iconSize"];
 
-    if (!result.properties["_iconAnchor"]) delete result.properties["_iconAnchor"];
+      if (!result.properties["_iconAnchor"]) delete result.properties["_iconAnchor"];
+    }
 
     if (layer.feature && layer.feature.properties) {
       for (var key in layer.feature.properties) {
