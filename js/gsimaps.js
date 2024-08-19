@@ -39265,6 +39265,7 @@ GSI.SakuzuListItem = L.Evented.extend({
         break;
 
       case GSI.SakuzuListItem.LINESTRING:
+      case GSI.SakuzuListItem.MULTILINESTRING:
       case GSI.SakuzuListItem.FREEHAND:
         result = L.polyline(this._cloneLatLngs(layer.getLatLngs()), layer.options);
         result.feature = layer.feature;
@@ -39284,7 +39285,6 @@ GSI.SakuzuListItem = L.Evented.extend({
         result = L.circle(latlng, radius, layer.options);
         break;
 
-      case GSI.SakuzuListItem.MULTILINESTRING:
       case GSI.SakuzuListItem.MULTIPOINT:
         result = L.featureGroup();
         result.feature = layer.feature;
@@ -39361,6 +39361,9 @@ GSI.SakuzuListItem = L.Evented.extend({
             break;
           case "LineString":
             itemType = GSI.SakuzuListItem.LINESTRING;
+            break;
+          case "MultiLineString":
+            itemType = GSI.SakuzuListItem.MULTILINESTRING;
             break;
         }
       }
@@ -40973,6 +40976,7 @@ GSI.SakuzuListItem = L.Evented.extend({
 
       case GSI.SakuzuListItem.FREEHAND:
       case GSI.SakuzuListItem.LINESTRING:
+      case GSI.SakuzuListItem.MULTILINESTRING:
       case GSI.SakuzuListItem.POLYGON:
 
         targetLayer.options.editing = {};
@@ -40996,7 +41000,6 @@ GSI.SakuzuListItem = L.Evented.extend({
         break;
 
       case GSI.SakuzuListItem.MULTIPOINT:
-      case GSI.SakuzuListItem.MULTILINESTRING:
         var layers = targetLayer.getLayers();
         if (clearPathList) this._editingPathList = [];
         for (var i = 0; i < layers.length; i++) {
