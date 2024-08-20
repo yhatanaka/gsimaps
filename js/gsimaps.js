@@ -42229,33 +42229,31 @@ GSI.SakuzuListItem = L.Evented.extend({
     result.properties = this._layerInfo2Properties(this._getLayerInfo(layer));
 
     var options = layer.options;
-    if (!options && layer.getLayers) {
+    if ((!options || Object.keys(options).length === 0) && layer.getLayers) {
       var layers = layer.getLayers();
       if (layers.length > 0) {
         options = layers[0].options;
       }
     }
 
-    if (typeof options.icon !== 'undefined') {
-      var iconUrl = options.icon.options.iconUrl;
-      var iconSize = options.icon.options.iconSize;
-      var iconAnchor = options.icon.options.iconAnchor;
-      var html = options.icon.options.html;
-      if (options.icon.options.className == 'gsi-div-icon') {
-        result.properties["_markerType"] = "DivIcon";
-        result.properties["_html"] = (html || html != '' ? html : '　');
-      }
-      else {
-        result.properties["_markerType"] = "Icon";
-        result.properties["_iconUrl"] = iconUrl;
-      }
-      result.properties["_iconSize"] = iconSize;
-      result.properties["_iconAnchor"] = iconAnchor;
-
-      if (!result.properties["_iconSize"]) delete result.properties["_iconSize"];
-
-      if (!result.properties["_iconAnchor"]) delete result.properties["_iconAnchor"];
+    var iconUrl = options.icon.options.iconUrl;
+    var iconSize = options.icon.options.iconSize;
+    var iconAnchor = options.icon.options.iconAnchor;
+    var html = options.icon.options.html;
+    if (options.icon.options.className == 'gsi-div-icon') {
+      result.properties["_markerType"] = "DivIcon";
+      result.properties["_html"] = (html || html != '' ? html : '　');
     }
+    else {
+      result.properties["_markerType"] = "Icon";
+      result.properties["_iconUrl"] = iconUrl;
+    }
+    result.properties["_iconSize"] = iconSize;
+    result.properties["_iconAnchor"] = iconAnchor;
+
+    if (!result.properties["_iconSize"]) delete result.properties["_iconSize"];
+
+    if (!result.properties["_iconAnchor"]) delete result.properties["_iconAnchor"];
 
     if (layer.feature && layer.feature.properties) {
       for (var key in layer.feature.properties) {
@@ -42348,6 +42346,10 @@ GSI.SakuzuListItem.typeToTitle = function(drawType) {
       result = "マーカー（アイコン）";
       break;
 
+    case GSI.SakuzuListItem.MULTIPOINT:
+      result = "複数マーカー（アイコン）";
+      break;
+
     case GSI.SakuzuListItem.POINT_CIRCLE:
         result = "マーカー（円）";
         break;
@@ -42357,6 +42359,7 @@ GSI.SakuzuListItem.typeToTitle = function(drawType) {
         break;
 
     case GSI.SakuzuListItem.LINESTRING:
+    case GSI.SakuzuListItem.MULTILINESTRING:
         result = "線";
         break;
 
@@ -44098,8 +44101,11 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     this._container = $("<div>");
 
     // マーカー編集
-    if (this._drawType == GSI.SakuzuListItem.POINT ||
-      this._drawType == GSI.SakuzuListItem.POINT_TEXT) {
+    if (
+      this._drawType == GSI.SakuzuListItem.POINT ||
+      this._drawType == GSI.SakuzuListItem.POINT_TEXT ||
+      this._drawType == GSI.SakuzuListItem.MULTIPOINT
+    ) {
       this._markerEditPanel = this._createMarkerEditPanel();
       this._container.append( this._markerEditPanel);
     }
@@ -44116,7 +44122,10 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     }
 
     // ライン編集
-    if ( this._drawType == GSI.SakuzuListItem.LINESTRING) {
+    if (
+      this._drawType == GSI.SakuzuListItem.LINESTRING ||
+      this._drawType == GSI.SakuzuListItem.MULTILINESTRING
+    ) {
       this._lineEditPanel = this._createLineEditPanel();
       this._container.append( this._lineEditPanel);
     }
@@ -44150,8 +44159,19 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
   // 値リセット
   _resetView : function() {
     // マーカー編集部
-    if(this._drawType == GSI.SakuzuListItem.POINT || this._drawType == GSI.SakuzuListItem.POINT_TEXT) {
+    if(
+      this._drawType == GSI.SakuzuListItem.POINT ||
+      this._drawType == GSI.SakuzuListItem.POINT_TEXT
+    ) {
       this._refreshMarkerEditPanel(this._layer.options);
+    }
+    // MultiPointはマーカー編集部だが、FeatureGroupに格納されているので、最初のMarkerから
+    // optionsを読み込む必要がある。
+    if (
+      this._drawType == GSI.SakuzuListItem.MULTIPOINT
+    ) {
+      var options = this._layer.getLayers()[0].options;
+      this._refreshMarkerEditPanel(options);
     }
     // 円編集部
     if ( this._drawType == GSI.SakuzuListItem.POINT_CIRCLE ||
@@ -44161,7 +44181,10 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
       this._refreshCircleEditPanel( this._layer.options);
     }
     // ライン編集部
-    if ( this._drawType == GSI.SakuzuListItem.LINESTRING ) {
+    if (
+      this._drawType == GSI.SakuzuListItem.LINESTRING ||
+      this._drawType == GSI.SakuzuListItem.MULTILINESTRING
+    ) {
       this._refreshLineEditPanel( this._layer.options);
     }
     // ポリゴン編集部
