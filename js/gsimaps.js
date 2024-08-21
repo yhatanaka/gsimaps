@@ -40976,7 +40976,6 @@ GSI.SakuzuListItem = L.Evented.extend({
 
       case GSI.SakuzuListItem.FREEHAND:
       case GSI.SakuzuListItem.LINESTRING:
-      case GSI.SakuzuListItem.MULTILINESTRING:
       case GSI.SakuzuListItem.POLYGON:
 
         targetLayer.options.editing = {};
