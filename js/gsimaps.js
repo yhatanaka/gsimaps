@@ -42346,7 +42346,7 @@ GSI.SakuzuListItem.typeToTitle = function(drawType) {
       break;
 
     case GSI.SakuzuListItem.MULTIPOINT:
-      result = "複数マーカー（アイコン）";
+      result = "マーカー（アイコン）（マルチパート）";
       break;
 
     case GSI.SakuzuListItem.POINT_CIRCLE:
@@ -42358,8 +42358,11 @@ GSI.SakuzuListItem.typeToTitle = function(drawType) {
         break;
 
     case GSI.SakuzuListItem.LINESTRING:
-    case GSI.SakuzuListItem.MULTILINESTRING:
         result = "線";
+        break;
+
+    case GSI.SakuzuListItem.MULTILINESTRING:
+        result = "線（マルチパート）";
         break;
 
     case GSI.SakuzuListItem.POLYGON:
@@ -42375,7 +42378,7 @@ GSI.SakuzuListItem.typeToTitle = function(drawType) {
         break;
 
     case GSI.SakuzuListItem.MULTIPOLYGON:
-      result = "マルチポリゴン";
+      result = "ポリゴン（マルチパート）";
       break;
 
     default:
