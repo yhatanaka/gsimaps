@@ -39265,6 +39265,7 @@ GSI.SakuzuListItem = L.Evented.extend({
         break;
 
       case GSI.SakuzuListItem.LINESTRING:
+      case GSI.SakuzuListItem.MULTILINESTRING:
       case GSI.SakuzuListItem.FREEHAND:
         result = L.polyline(this._cloneLatLngs(layer.getLatLngs()), layer.options);
         result.feature = layer.feature;
@@ -39284,7 +39285,6 @@ GSI.SakuzuListItem = L.Evented.extend({
         result = L.circle(latlng, radius, layer.options);
         break;
 
-      case GSI.SakuzuListItem.MULTILINESTRING:
       case GSI.SakuzuListItem.MULTIPOINT:
         result = L.featureGroup();
         result.feature = layer.feature;
@@ -39361,6 +39361,9 @@ GSI.SakuzuListItem = L.Evented.extend({
             break;
           case "LineString":
             itemType = GSI.SakuzuListItem.LINESTRING;
+            break;
+          case "MultiLineString":
+            itemType = GSI.SakuzuListItem.MULTILINESTRING;
             break;
         }
       }
@@ -40996,7 +40999,6 @@ GSI.SakuzuListItem = L.Evented.extend({
         break;
 
       case GSI.SakuzuListItem.MULTIPOINT:
-      case GSI.SakuzuListItem.MULTILINESTRING:
         var layers = targetLayer.getLayers();
         if (clearPathList) this._editingPathList = [];
         for (var i = 0; i < layers.length; i++) {
@@ -42226,7 +42228,7 @@ GSI.SakuzuListItem = L.Evented.extend({
     result.properties = this._layerInfo2Properties(this._getLayerInfo(layer));
 
     var options = layer.options;
-    if (!options && layer.getLayers) {
+    if ((!options || Object.keys(options).length === 0) && layer.getLayers) {
       var layers = layer.getLayers();
       if (layers.length > 0) {
         options = layers[0].options;
@@ -42343,6 +42345,10 @@ GSI.SakuzuListItem.typeToTitle = function(drawType) {
       result = "マーカー（アイコン）";
       break;
 
+    case GSI.SakuzuListItem.MULTIPOINT:
+      result = "マーカー（アイコン）（マルチパート）";
+      break;
+
     case GSI.SakuzuListItem.POINT_CIRCLE:
         result = "マーカー（円）";
         break;
@@ -42353,6 +42359,10 @@ GSI.SakuzuListItem.typeToTitle = function(drawType) {
 
     case GSI.SakuzuListItem.LINESTRING:
         result = "線";
+        break;
+
+    case GSI.SakuzuListItem.MULTILINESTRING:
+        result = "線（マルチパート）";
         break;
 
     case GSI.SakuzuListItem.POLYGON:
@@ -42368,7 +42378,7 @@ GSI.SakuzuListItem.typeToTitle = function(drawType) {
         break;
 
     case GSI.SakuzuListItem.MULTIPOLYGON:
-      result = "マルチポリゴン";
+      result = "ポリゴン（マルチパート）";
       break;
 
     default:
@@ -44093,8 +44103,11 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     this._container = $("<div>");
 
     // マーカー編集
-    if (this._drawType == GSI.SakuzuListItem.POINT ||
-      this._drawType == GSI.SakuzuListItem.POINT_TEXT) {
+    if (
+      this._drawType == GSI.SakuzuListItem.POINT ||
+      this._drawType == GSI.SakuzuListItem.POINT_TEXT ||
+      this._drawType == GSI.SakuzuListItem.MULTIPOINT
+    ) {
       this._markerEditPanel = this._createMarkerEditPanel();
       this._container.append( this._markerEditPanel);
     }
@@ -44111,7 +44124,10 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
     }
 
     // ライン編集
-    if ( this._drawType == GSI.SakuzuListItem.LINESTRING) {
+    if (
+      this._drawType == GSI.SakuzuListItem.LINESTRING ||
+      this._drawType == GSI.SakuzuListItem.MULTILINESTRING
+    ) {
       this._lineEditPanel = this._createLineEditPanel();
       this._container.append( this._lineEditPanel);
     }
@@ -44145,8 +44161,19 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
   // 値リセット
   _resetView : function() {
     // マーカー編集部
-    if(this._drawType == GSI.SakuzuListItem.POINT || this._drawType == GSI.SakuzuListItem.POINT_TEXT) {
+    if(
+      this._drawType == GSI.SakuzuListItem.POINT ||
+      this._drawType == GSI.SakuzuListItem.POINT_TEXT
+    ) {
       this._refreshMarkerEditPanel(this._layer.options);
+    }
+    // MultiPointはマーカー編集部だが、FeatureGroupに格納されているので、最初のMarkerから
+    // optionsを読み込む必要がある。
+    if (
+      this._drawType == GSI.SakuzuListItem.MULTIPOINT
+    ) {
+      var options = this._layer.getLayers()[0].options;
+      this._refreshMarkerEditPanel(options);
     }
     // 円編集部
     if ( this._drawType == GSI.SakuzuListItem.POINT_CIRCLE ||
@@ -44156,7 +44183,10 @@ GSI.SakuzuInfoEditDialog = GSI.Dialog.extend({
       this._refreshCircleEditPanel( this._layer.options);
     }
     // ライン編集部
-    if ( this._drawType == GSI.SakuzuListItem.LINESTRING ) {
+    if (
+      this._drawType == GSI.SakuzuListItem.LINESTRING ||
+      this._drawType == GSI.SakuzuListItem.MULTILINESTRING
+    ) {
       this._refreshLineEditPanel( this._layer.options);
     }
     // ポリゴン編集部
