@@ -7,6 +7,21 @@
       "toggleall": false,
       "entries": [
         {
+        "type": "Layer",
+        "id": "20240102noto_0405_0426do",
+        "title": "能登地区全域（2024/4/5～4/26撮影）",
+        "url": "https://maps.gsi.go.jp/xyz/20240102noto_0405_0426do/{z}/{x}/{y}.png",
+        "cocotile": false,
+        "minZoom": 10,
+        "maxZoom": 18,
+        "area" : {
+          "lat" : 37.055725,
+          "lng" : 136.906128,
+          "zoom" : 10
+        },
+        "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>"
+        },
+        {
           "type": "LayerGroup",
           "title": "珠洲地区",
           "toggleall": false,
