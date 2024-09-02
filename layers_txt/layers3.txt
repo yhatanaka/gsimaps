@@ -37,7 +37,7 @@
         },
         {
           "type": "LayerGroup",
-          "title": "火山基本図・火山基本図データ",
+          "title": "火山基本図",
           "html" : "<div class='layer_text'><p>火山の精密な等高線や火山防災施設などを示した地図です。</p></div>",
           "toggleall": false,
           "entries": [
@@ -86,20 +86,20 @@
         },
         {
           "type": "LayerGroup",
-          "title": "火山土地条件図・火山地形分類データ",
+          "title": "火山土地条件図",
           "html" : "<div class='layer_text'><p>火山活動によって形成された地形や噴出物の分布などを示した地図です。</p></div>",
           "toggleall": false,
           "entries": [
             {
               "type": "LayerGroup",
-              "title": "火山地形分類データ",
-              "html": "<div class='layer_text'><p>火山土地条件図の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>",
+              "title": "火山土地条件図　数値データ（火山地形分類）",
+              "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>",
               "toggleall": false,
               "entries": [
                 {
                   "type": "Layer",
                   "id": "vlcd_meakan",
-                  "title": "火山地形分類データ（雌阿寒岳・雄阿寒岳）",
+                  "title": "雌阿寒岳・雄阿寒岳",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_meakan/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -109,12 +109,12 @@
                     "lng" : 144.011879,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「雌阿寒岳・雄阿寒岳」（平成19・20年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「雌阿寒岳・雄阿寒岳」（平成19・20年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_tokachi",
-                  "title": "火山地形分類データ（十勝岳）",
+                  "title": "十勝岳",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_tokachi/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -124,12 +124,12 @@
                     "lng" : 142.676353,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「十勝岳」（平成元年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「十勝岳」（平成元年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_tarumae",
-                  "title": "火山地形分類データ（樽前山）",
+                  "title": "樽前山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_tarumae/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -139,12 +139,12 @@
                     "lng" : 141.376019,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「樽前山」（平成11年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「樽前山」（平成11年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_usu",
-                  "title": "火山地形分類データ（有珠山）",
+                  "title": "有珠山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_usu/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -154,12 +154,12 @@
                     "lng" : 140.833912,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「有珠山」（平成10年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「有珠山」（平成10年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_hokoma",
-                  "title": "火山地形分類データ（北海道駒ヶ岳）",
+                  "title": "北海道駒ヶ岳",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_hokoma/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -169,12 +169,12 @@
                     "lng" : 140.685768,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「北海道駒ヶ岳」（平成5年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「北海道駒ヶ岳」（平成5年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_iwate",
-                  "title": "火山地形分類データ（岩手山）",
+                  "title": "岩手山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_iwate/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -184,42 +184,12 @@
                     "lng" : 140.997677,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「岩手山」（平成23・24年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
-                },
-                {
-                  "type": "Layer",
-                  "id": "vlcd_akitayake",
-                  "title": "火山地形分類データ（秋田焼山）",
-                  "url": "https://maps.gsi.go.jp/xyz/vlcd_akitayake/{z}/{x}/{y}.png",
-                  "cocotile": true,
-                  "minZoom": 10,
-                  "maxZoom": 16,
-                  "area" : {
-                    "lat" : 39.967188,
-                    "lng" : 140.761814,
-                    "zoom" : 13
-                  },
-                  "html": "<div class='layer_text'><p>火山土地条件図「秋田焼山」（平成27年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
-                },
-                {
-                  "type": "Layer",
-                  "id": "vlcd_akitakoma",
-                  "title": "火山地形分類データ（秋田駒ヶ岳）",
-                  "url": "https://maps.gsi.go.jp/xyz/vlcd_akitakoma/{z}/{x}/{y}.png",
-                  "cocotile": true,
-                  "minZoom": 10,
-                  "maxZoom": 16,
-                  "area" : {
-                    "lat" : 39.754911,
-                    "lng" : 140.797348,
-                    "zoom" : 13
-                  },
-                  "html": "<div class='layer_text'><p>火山土地条件図「秋田駒ヶ岳」（平成26年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「岩手山」（平成23・24年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_chokai",
-                  "title": "火山地形分類データ（鳥海山）",
+                  "title": "鳥海山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_chokai/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -229,27 +199,27 @@
                     "lng" : 140.034485,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「鳥海山」（平成28、29年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「鳥海山」（平成28、29年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
-                  "id": "vlcd_kurikoma",
-                  "title": "火山地形分類データ（栗駒山）",
-                  "url": "https://maps.gsi.go.jp/xyz/vlcd_kurikoma/{z}/{x}/{y}.png",
+                  "id": "vlcd_zao",
+                  "title": "蔵王山",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_zao/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
                   "maxZoom": 16,
                   "area" : {
-                    "lat" : 38.964948,
-                    "lng" : 140.781727,
+                    "lat" : 38.136244,
+                    "lng" : 140.449476,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「栗駒山」（平成22年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「蔵王山」（令和4・5年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_adatara",
-                  "title": "火山地形分類データ（安達太良山）",
+                  "title": "安達太良山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_adatara/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -259,12 +229,12 @@
                     "lng" : 140.283222,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「安達太良山」（平成17・18年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「安達太良山」（平成17・18年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_bandai",
-                  "title": "火山地形分類データ（磐梯山）",
+                  "title": "磐梯山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_bandai/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -274,12 +244,12 @@
                     "lng" : 140.078602,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「磐梯山」（平成12・13年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「磐梯山」（平成12・13年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_kusatsu",
-                  "title": "火山地形分類データ（草津白根山）",
+                  "title": "草津白根山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_kusatsu/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -289,12 +259,12 @@
                     "lng" : 138.539658,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「草津白根山」（平成2年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「草津白根山」（平成2年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_asamayama",
-                  "title": "火山地形分類データ（浅間山）",
+                  "title": "浅間山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_asamayama/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -304,27 +274,27 @@
                     "lng" : 138.520000,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「浅間山」（令和2年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「浅間山」（令和2年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
-                  "id": "vlcd_niigatayake",
-                  "title": "火山地形分類データ（新潟焼山）",
-                  "url": "https://maps.gsi.go.jp/xyz/vlcd_niigatayake/{z}/{x}/{y}.png",
+                  "id": "vlcd_yakedake",
+                  "title": "焼岳",
+                  "url": "https://maps.gsi.go.jp/xyz/vlcd_yakedake/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
                   "maxZoom": 16,
                   "area" : {
-                    "lat" : 36.921009,
-                    "lng" : 138.036690,
+                    "lat" : 36.228904,
+                    "lng" : 137.584705,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「新潟焼山」（平成25年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「焼岳」（令和5年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_ontake",
-                  "title": "火山地形分類データ（御嶽山）",
+                  "title": "御嶽山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_ontake/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -334,12 +304,12 @@
                     "lng" : 137.485313,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「御嶽山」（平成21・22年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「御嶽山」（平成21・22年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_fuji",
-                  "title": "火山地形分類データ（富士山）",
+                  "title": "富士山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_fuji/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -349,12 +319,12 @@
                     "lng" : 138.731232,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「富士山」（平成14・15年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「富士山」（平成14・15年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_hakone",
-                  "title": "火山地形分類データ（箱根山）",
+                  "title": "箱根山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_hakone/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -364,12 +334,12 @@
                     "lng" : 139.022133,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「箱根山」（令和元年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「箱根山」（令和元年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_izuo",
-                  "title": "火山地形分類データ（伊豆大島）",
+                  "title": "伊豆大島",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_izuo/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -379,12 +349,12 @@
                     "lng" : 139.396248,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「伊豆大島」（平成16・17年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「伊豆大島」（平成16・17年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_miyake",
-                  "title": "火山地形分類データ（三宅島）",
+                  "title": "三宅島",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_miyake/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -394,12 +364,12 @@
                     "lng" : 139.526539,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「三宅島」（平成6年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「三宅島」（平成6年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_hachijojima",
-                  "title": "火山地形分類データ（八丈島）",
+                  "title": "八丈島",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_hachijojima/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -409,12 +379,12 @@
                     "lng" : 139.812000,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「八丈島」（平成30～令和2年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「八丈島」（平成30～令和2年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_kuju",
-                  "title": "火山地形分類データ（くじゅう連山）",
+                  "title": "くじゅう連山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_kuju/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -424,12 +394,12 @@
                     "lng" : 131.244049,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「くじゅう連山」（平成18・19年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「くじゅう連山」（平成18・19年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_aso",
-                  "title": "火山地形分類データ（阿蘇山）",
+                  "title": "阿蘇山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_aso/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -439,12 +409,12 @@
                     "lng" : 131.088524,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「阿蘇山」（平成4年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「阿蘇山」（平成4年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_unzen",
-                  "title": "火山地形分類データ（雲仙岳）",
+                  "title": "雲仙岳",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_unzen/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -454,12 +424,12 @@
                     "lng" : 130.304718,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「雲仙岳」（平成8年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「雲仙岳」（平成8年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_kiri",
-                  "title": "火山地形分類データ（霧島山）",
+                  "title": "霧島山",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_kiri/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -469,12 +439,12 @@
                     "lng" : 130.883217,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「霧島山」（平成7・9年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「霧島山」（平成7・9年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_sakura",
-                  "title": "火山地形分類データ（桜島）",
+                  "title": "桜島",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_sakura/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -484,12 +454,12 @@
                     "lng" : 130.657139,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「桜島」（平成元年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「桜島」（平成元年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_satsumaio",
-                  "title": "火山地形分類データ（薩摩硫黄島）",
+                  "title": "薩摩硫黄島",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_satsumaio/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -499,12 +469,12 @@
                     "lng" : 130.303173,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「薩摩硫黄島」（平成20・21年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「薩摩硫黄島」（平成20・21年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_satsumatake",
-                  "title": "火山地形分類データ（薩摩竹島）",
+                  "title": "薩摩竹島",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_satsumatake/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -514,12 +484,12 @@
                     "lng" : 130.426426,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「薩摩硫黄島」（平成20・21年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「薩摩硫黄島」（平成20・21年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 },
                 {
                   "type": "Layer",
                   "id": "vlcd_suwanosejima",
-                  "title": "火山地形分類データ（諏訪之瀬島）",
+                  "title": "諏訪之瀬島",
                   "url": "https://maps.gsi.go.jp/xyz/vlcd_suwanosejima/{z}/{x}/{y}.png",
                   "cocotile": true,
                   "minZoom": 10,
@@ -529,7 +499,7 @@
                     "lng" : 129.711285,
                     "zoom" : 13
                   },
-                  "html": "<div class='layer_text'><p>火山土地条件図「諏訪之瀬島」（令和3～5年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。</p></div>"
+                  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「諏訪之瀬島」（令和3～5年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>"
                 }
               ]
             },
