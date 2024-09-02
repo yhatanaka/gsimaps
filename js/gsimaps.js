@@ -8301,7 +8301,7 @@ GSI.LayersJSON = L.Evented.extend({
         } else if (entries[i].title == "自然災害伝承碑") {
           entries[i]["title_evac"] = CONFIG.DisasterLoreFolder;
           entries[i]["title_disasterlore"] = CONFIG.DisasterLoreFolderSYS;
-        } else if (entries[i].title == "火山地形分類データ") {
+        } else if (entries[i].title == "火山土地条件図　数値データ（火山地形分類）") {
           entries[i]["title_evac"] = CONFIG.VolcanoTerrainFolderSYS;
         } else {
           func( entries[i].entries, func );
@@ -8321,7 +8321,7 @@ GSI.LayersJSON = L.Evented.extend({
           json_dh.entries = json.layers[ll].entries.concat();
           hybridjson.layers.push(json_dh);
         }
-        else if (json.layers[ll].title == "火山地形分類データ") {
+        else if (json.layers[ll].title == "火山土地条件図　数値データ（火山地形分類）") {
           var json_dh = JSON.parse("{ \"type\": \"LayerGroup\", \"title\": \"" + CONFIG.VolcanoTerrainFolder + "\", \"title_volcano_terrain\": \"" + CONFIG.VolcanoTerrainFolderSYS + "\", \"iconUrl\": \"\", \"open\": false, \"toggleall\": false, \"entries\": [] }");
           json_dh.entries = json.layers[ll].entries.concat();
           hybridjson.layers.push(json_dh);
