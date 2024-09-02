@@ -102,14 +102,6 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
-  "vlcd_akitakoma": {
-    "url": "https://maps.gsi.go.jp/xyz/vlcd_akitakoma/vlcd_akitakoma.csv",
-    "layer": {
-      "url": "https://maps.gsi.go.jp/xyz/vlcd_akitakoma/{z}/{x}/{y}.png",
-      "minZoom": 10,
-      "maxZoom": 16
-    }
-  },
   "vlcd_chokai": {
     "url": "https://maps.gsi.go.jp/xyz/vlcd_chokai/vlcd_chokai.csv",
     "layer": {
@@ -118,10 +110,10 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
-  "vlcd_kurikoma": {
-    "url": "https://maps.gsi.go.jp/xyz/vlcd_kurikoma/vlcd_kurikoma.csv",
+  "vlcd_zao": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_zao/vlcd_zao.csv",
     "layer": {
-      "url": "https://maps.gsi.go.jp/xyz/vlcd_kurikoma/{z}/{x}/{y}.png",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_zao/{z}/{x}/{y}.png",
       "minZoom": 10,
       "maxZoom": 16
     }
@@ -158,10 +150,10 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
-  "vlcd_niigatayake": {
-    "url": "https://maps.gsi.go.jp/xyz/vlcd_niigatayake/vlcd_niigatayake.csv",
+    "vlcd_yakedake": {
+    "url": "https://maps.gsi.go.jp/xyz/vlcd_yakedake/vlcd_yakedake.csv",
     "layer": {
-      "url": "https://maps.gsi.go.jp/xyz/vlcd_niigatayake/{z}/{x}/{y}.png",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_yakedake/{z}/{x}/{y}.png",
       "minZoom": 10,
       "maxZoom": 16
     }
@@ -278,14 +270,6 @@ CONFIG.HANREILIST = {
       "maxZoom": 16
     }
   },
-  "vlcd_akitayake": {
-    "url": "https://maps.gsi.go.jp/xyz/vlcd_akitayake/vlcd_akitayake.csv",
-    "layer": {
-      "url": "https://maps.gsi.go.jp/xyz/vlcd_akitayake/{z}/{x}/{y}.png",
-      "minZoom": 10,
-      "maxZoom": 16
-    }
-  },
   "swale": {
     "url": "https://maps.gsi.go.jp/xyz/swale/swale.csv",
     "layer": {
@@ -307,7 +291,7 @@ CONFIG.DisasterLoreFolderSYS = "GSI.MAP.DISASTER.LORE";
 CONFIG.DisasterLoreHeader = "disaster_lore";
 CONFIG.DisasterLoreAll = "disaster_lore_all";
 
-CONFIG.VolcanoTerrainFolder = "火山地形分類データ";
+CONFIG.VolcanoTerrainFolder = "火山土地条件図";
 CONFIG.VolcanoTerrainFolderSYS = "GSI.MAP.VOLCANO.TERRAIN";
 CONFIG.VolcanoTerrainHeader = "volcano_terrain";
 
@@ -367,7 +351,7 @@ CONFIG.CONFIRM_LAYERS = {
 
 
 // 初期状態で合成をOnにするレイヤーID
-// 火山地形分類データは排他選択(50431行目付近)と同じ箇所で処理
+// 火山土地条件図　数値データ（火山地形分類）は排他選択(50431行目付近)と同じ箇所で処理
 CONFIG.BLENDLAYERS = {
   "relief": true,
   "relief_free": true,
