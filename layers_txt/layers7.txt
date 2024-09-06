@@ -8,7 +8,7 @@
       "entries": [
         {
           "type": "LayerGroup",
-          "title": "地理教育支援",
+          "title": "防災・地理教育支援",
           "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/chirikyouiku.png",
           "toggleall": false,
           "html": "<div class='layer_text'>地理教育に活用できる情報を閲覧できます。</div>",
