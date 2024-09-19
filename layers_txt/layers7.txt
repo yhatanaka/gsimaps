@@ -1317,6 +1317,17 @@
             },
             {
               "type": "Layer",
+              "id": "population",
+              "title": "地域メッシュ統計 人口（総務省統計局）",
+              "url": "https://maps.gsi.go.jp/xyz/population/{z}/{x}/{y}.geojson",
+              "cocotile": false,
+              "minZoom": 12,
+              "maxZoom": 18,
+              "maxNativeZoom": 15,
+              "html": "<table><tr><td><div class='layer_text'><p>令和2年国勢調査の4分の1地域メッシュ（250mメッシュ）人口を表示します。</p><p>ズームレベル12～18で表示されます。</p><p>令和2年国勢調査に関する地域メッシュ統計（総務省）のデータを基に作成</p></div></td><td><img src=\"./legend/kokusei_population.png\" width=150 alt=\"凡例\"></td></tr></table>"
+            },
+            {
+              "type": "Layer",
               "id": "did2020",
               "title": "人口集中地区 令和2年（総務省統計局）",
               "url": "https://maps.gsi.go.jp/xyz/did2020/{z}/{x}/{y}.png",
@@ -1411,15 +1422,6 @@
                   "toggleall": false,
                   "entries": [
                    {
-                      "type": "Layer",
-                      "id": "jin202408",
-                      "title": "8月更新",
-                      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/087.png",
-                      "url": "https://maps.gsi.go.jp/xyz/jin202408/{z}/{x}/{y}.geojson",
-                      "maxNativeZoom": 2,
-                      "cocotile": false
-                    },
-                    {
                       "type": "Layer",
                       "id": "jin202407",
                       "title": "7月更新",
