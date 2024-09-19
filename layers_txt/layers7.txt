@@ -1253,7 +1253,7 @@
               "type": "Layer",
               "id": "landslide",
               "title": "地すべり地形分布図日本全国版（防災科学技術研究所）",
-              "url": "https://jmapweb3v.bosai.go.jp/map/xyz/landslide/{z}/{x}/{y}.png",
+              "url": "https://www.j-shis.bosai.go.jp/map/xyz/landslide/{z}/{x}/{y}.png",
               "cocotile": true,
               "minZoom": 5,
               "maxZoom": 15,
