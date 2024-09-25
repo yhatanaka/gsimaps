@@ -1,9 +1,6 @@
 [
 	{
-		"url":"./layers_topic_20240809hyuganada.txt"
-	},
-	{
-		"url":"./layers_topic_20240726rain.txt"
+		"url":"./layers_topic_20240923rain.txt"
 	},
 	{
 		"url":"./layers_topic_20240102noto.txt"
