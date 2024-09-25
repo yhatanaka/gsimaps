@@ -142,7 +142,7 @@
          "title": "斜面崩壊・土石流・堆積分布データ",
          "id": "20240923rain_syamenhoukai_dosekiryu_taiseki",
          "toggleall": false,
-         "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240923rain_syamenhoukai_dosekiryu_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この情報は、国土地理院が9月23日に撮影した空中写真（正射画像）を用いて、令和6年9月20日からの大雨によって生じたと考えられる斜面崩壊地、土石流範囲及び堆積箇所を判読したものです。<br>２．現地調査は実施していないことから、実際に崩壊等のあった箇所でも表示できていない箇所や、今回の大雨による崩壊地等以外の箇所を表示している場合があります。<br>３．斜面崩壊・土石流・堆積分布は、長さ又は幅がおおむね50m以上のものを表しています。<br>４．斜面崩壊・土石流・堆積分布の範囲は速報のため、今後変わりうる場合があります。<br>　令和6年9月24日12時作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+         "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/20240923rain_syamenhoukai_dosekiryu_taiseki_legend.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">１．この情報は、国土地理院が9月23日及び24日に撮影した空中写真（正射画像）を用いて、令和6年9月20日からの大雨によって生じたと考えられる斜面崩壊地、土石流範囲及び堆積箇所を判読したものです。<br>２．現地調査は実施していないことから、実際に崩壊等のあった箇所でも表示できていない箇所や、今回の大雨による崩壊地等以外の箇所を表示している場合があります。<br>３．斜面崩壊・土石流・堆積分布は、長さ又は幅がおおむね50m以上のものを表しています。<br>　令和6年9月25日13時作成</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
          "entries": [
            {
              "type": "Layer",
