@@ -4480,7 +4480,7 @@
                   "cocotile": true,
                   "minZoom": 4,
                   "maxZoom": 12,
-                  "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">(縮尺2500分1相当以上の概ねの範囲)</div><div class=\"gsi_layerinfo_kaisetu\"><div></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
+                  "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">基盤地図情報の提供地域のうち、縮尺2500分1相当以上の概ねの範囲を表示します。<br>なお、縮尺2500分1相当以上と5000分1相当のデータを一体として整備している地域が一部ございます。</div><div class=\"gsi_layerinfo_kaisetu\"><div></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>"
                 },
                 {
                   "type": "LayerGroup",
