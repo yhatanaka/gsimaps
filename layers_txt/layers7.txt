@@ -5317,6 +5317,28 @@
             },
             {
               "type": "Layer",
+              "id": "st25000",
+              "title": "数値地図（国土基本情報）の更新情報",
+              "url": "https://djbm.gsi.go.jp/djbm/updatetile/data/st25000/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 13,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"gsi_layerinfo_title\">数値地図（国土基本情報）の更新情報</div><div class=\"gsi_layerinfo_kaisetu\">数値地図（国土基本情報）の図郭を表示します。<br>地図上をクリックすると、コード、図名（漢字）、更新年月日が表示されます。</div><br><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://www.gsi.go.jp/kibanjoho/kibanjoho40027.html\" target=\"_blank\">数値地図（国土基本情報）サイト</a></div>"
+            },
+            {
+              "type": "Layer",
+              "id": "dt25000",
+              "title": "電子地形図25000の更新情報",
+              "url": "https://djbm.gsi.go.jp/djbm/updatetile/data/dt25000/{z}/{x}/{y}.geojson",
+              "cocotile": true,
+              "minZoom": 2,
+              "maxZoom": 13,
+              "maxNativeZoom": 2,
+              "html": "<div class=\"gsi_layerinfo_title\">電子地形図25000の更新情報</div><div class=\"gsi_layerinfo_kaisetu\">電子地形図25000の図郭を表示します。<br>地図上をクリックすると、コード、図名（漢字）、更新年月日が表示されます。</div><br><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://www.gsi.go.jp/kibanjoho/kibanjoho40030.html\" target=\"_blank\">電子地形図25000サイト</a></div>"
+            },
+            {
+              "type": "Layer",
               "id": "denshichikeizu50000",
               "title": "電子地形図50000の更新情報",
               "url": "https://maps.gsi.go.jp/xyz/denshichikeizu50000/{z}/{x}/{y}.geojson",
