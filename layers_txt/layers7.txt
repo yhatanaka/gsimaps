@@ -1418,6 +1418,21 @@
               "entries": [
                 {
                   "type": "LayerGroup",
+                  "title": "2025年登山道更新情報",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "toz202501",
+                      "title": "1月更新",
+                      "url": "https://maps.gsi.go.jp/xyz/toz202501/{z}/{x}/{y}.geojson",
+                      "maxNativeZoom": 2,
+                      "cocotile": false
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "2024年迅速更新情報",
                   "toggleall": false,
                   "entries": [
