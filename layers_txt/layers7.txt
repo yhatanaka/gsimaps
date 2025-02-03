@@ -1187,7 +1187,7 @@
             },
             {
               "type": "LayerGroup",
-              "title": "土地分類基本調査（土地履歴調査）－国土政策局",
+              "title": "土地分類基本調査（土地履歴調査）－政策統括官付",
               "html": "<div class='layer_text'><p>土地分類基本調査（土地履歴調査）で整備した調査成果図。地形分類や災害履歴の情報を見ることができます。</p></div>",
               "toggleall": false,
               "src": "./layers_tochibunrui.txt"
