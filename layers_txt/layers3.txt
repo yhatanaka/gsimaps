@@ -3,7 +3,7 @@
     {
       "type": "LayerGroup",
       "title": "土地の成り立ち・土地利用",
-      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/tochijoken.png",      
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/tochijoken.png",
       "html" : "<div class='layer_text'>地形や活断層、火山、土地利用など、様々な観点で土地の特徴を表した地図などを閲覧できます。</div>",
       "toggleall": false,
       "entries": [
