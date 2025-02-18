@@ -19652,7 +19652,7 @@ GSI.MapLayerList = L.Evented.extend({
   },
 
   append: function (info, noFinishMove, isHide, Confirm_FLAG, blend) {
-    
+
     if (this.exists(info)) return;
     info._appendInfo = null;
 
@@ -26813,7 +26813,7 @@ GSI.MapManager = L.Evented.extend({
 
   lakeDataEnabled: function() {
     return this._enableLakeData;
-  }  
+  }
 });
 
 /************************************************************************
