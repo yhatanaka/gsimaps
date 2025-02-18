@@ -10305,7 +10305,7 @@ GSI.PagePrinter = L.Evented.extend({
       .attr({colspan: "3"})
       .css({"text-align":"center"});
       //.addClass('no_print');
-    
+
     var tid = 'gsi_print_title';
     this._title = $("<input>").attr({"type":"textbox", "id":tid}).css({"width":"420px", border:"solid 1px", "white-space":"no-wrap"});
     var labelTitle = $("<span>").attr({ "for": tid }).html("タイトル：").addClass("no_print");
@@ -23077,7 +23077,7 @@ GSI.ElevationLoader = L.Evented.extend({
 
   _parseValidUrl: function(valueError){
     if (!this._current.urlList || this._current.urlList.length <= 0) return null;   //not found
-    
+
     var url = this._current.urlList.shift();
     if ( valueError && url.title=="DEMGM") return null;
 
