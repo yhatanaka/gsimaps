@@ -38250,6 +38250,7 @@ GSI.Control.GPSButton = L.Control.extend({
     } else {
       this._map.panTo([coords.latitude, coords.longitude], { reset: true });
     }
+    this._selfMove = false;
     this._showMarker(coords);
   },
   _onZoomStart: function () {
