@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gsi-cyberjapan/gsimaps.git"
+    "url": "git+https://github.com/gsimaps-cicd/gsimaps-internal.git"
   },
   "author": "",
   "license": "BSD-2-Clause license",
   "bugs": {
-    "url": "https://github.com/gsi-cyberjapan/gsimaps/issues"
+    "url": "https://github.com/gsimaps-cicd/gsimaps-internal/issues"
   },
   "homepage": "https://maps.gsi.go.jp/",
   "devDependencies": {
