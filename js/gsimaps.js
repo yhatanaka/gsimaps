@@ -38250,9 +38250,7 @@ GSI.Control.GPSButton = L.Control.extend({
     } else {
       this._map.panTo([coords.latitude, coords.longitude], { reset: true });
     }
-    this._selfMove = false;
     this._showMarker(coords);
-
   },
   _onZoomStart: function () {
     this._zooming = true;
@@ -38261,9 +38259,11 @@ GSI.Control.GPSButton = L.Control.extend({
     this._zooming = false;
   },
 
-  _onMoveStart: function () {
-    if (!this._selfMove && !this._zooming && !this._isCompareSliderMoving) {
-      this.stop();
+  _onMoveStart: function (e) {
+    if (this._userInteraction) {
+      if (!this._selfMove && !this._zooming) {
+        this.stop();
+      }
     }
     this._selfMove = false;
   },
@@ -38281,6 +38281,13 @@ GSI.Control.GPSButton = L.Control.extend({
   onAdd: function (map) {
     this._on = false;
     this._map = map;
+    this._userInteraction = false;
+
+    const container = map.getContainer();
+    container.addEventListener("mousedown", () => { this._userInteraction = true; });
+    container.addEventListener("touchstart", () => { this._userInteraction = true; });
+
+    map.on("moveend", () => { this._userInteraction = false; });
     this._map.on("movestart", L.bind(this._onMoveStart, this));
     this._map.on("zoomstart", L.bind(this._onZoomStart, this));
     this._map.on("zoomend", L.bind(this._onZoomEnd, this));
@@ -51057,11 +51064,9 @@ GSI.GSIMaps = L.Evented.extend({
         range: "min", min: 0, max: 10000, step: 1, value: 5000,
         "slide": L.bind(function (event, ui) {
 
-          this._gpsButton._isCompareSliderMoving = true;
           this._comparisonSeparater.setLeft( this.getCompareSliderPos(ui.value) );
           // スライダー操作後にフラグをリセット（少し遅延させる）
           setTimeout(L.bind(function() {
-            this._gpsButton._isCompareSliderMoving = false;
           }, this), 100);
         }, this)
       });
