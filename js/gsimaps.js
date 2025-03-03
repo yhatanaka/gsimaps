@@ -15,6 +15,8 @@ var GSI = {
   , FILEURL: {}
 };
 GSI.TEXT = GSITEXT;
+GSI.GPS = GSI.GPS || {};
+GSI.GPS.sharedState = { userInteraction: false };
 /************************************************************************
  モバイル判定
 ************************************************************************/
@@ -26508,7 +26510,9 @@ GSI.MapManager = L.Evented.extend({
     // this._map.addControl(new GSI.Control.ZoomGuidePanel({ position: "bottomright" }, this.options.mapMenuRight ? "right" : "left"));
 
     if (CONFIG.USEGPS) {
-      this._gpsControl = new GSI.Control.GPSButton();
+      this._gpsControl = new GSI.Control.GPSButton({ 
+        sharedState: GSI.GPS.sharedState 
+      }); 
       this._map.addControl(this._gpsControl);
 
     }
@@ -38261,7 +38265,7 @@ GSI.Control.GPSButton = L.Control.extend({
   },
 
   _onMoveStart: function (e) {
-    if (this._userInteraction) {
+    if (this._state.userInteraction) {
       if (!this._selfMove && !this._zooming) {
         this.stop();
       }
@@ -38282,14 +38286,13 @@ GSI.Control.GPSButton = L.Control.extend({
   onAdd: function (map) {
     this._on = false;
     this._map = map;
-    this._userInteraction = false;
+    this._state = this.options.sharedState || { userInteraction: false };
 
     const container = map.getContainer();
-    container.addEventListener("mousedown", () => { this._userInteraction = true; });
-    container.addEventListener("touchstart", () => { this._userInteraction = true; });
-    container.addEventListener("touchend", () => { this._userInteraction = true; });
+    container.addEventListener("mousedown", () => { this._state.userInteraction = true; });
+    container.addEventListener("touchstart", () => { this._state.userInteraction = true; });
 
-    map.on("moveend", () => { this._userInteraction = false; });
+    map.on("moveend", () => { this._state.userInteraction = false; });
     this._map.on("movestart", L.bind(this._onMoveStart, this));
     this._map.on("zoomstart", L.bind(this._onZoomStart, this));
     this._map.on("zoomend", L.bind(this._onZoomEnd, this));
