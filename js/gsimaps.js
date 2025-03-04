@@ -38292,7 +38292,8 @@ GSI.Control.GPSButton = L.Control.extend({
     container.addEventListener("mousedown", () => { this._state.userInteraction = true; });
     container.addEventListener("touchstart", () => { this._state.userInteraction = true; });
 
-    map.on("moveend", () => { this._state.userInteraction = false; });
+    this._map.on("moveend", () => { this._state.userInteraction = false; });
+
     this._map.on("movestart", L.bind(this._onMoveStart, this));
     this._map.on("zoomstart", L.bind(this._onZoomStart, this));
     this._map.on("zoomend", L.bind(this._onZoomEnd, this));
