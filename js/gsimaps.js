@@ -16,7 +16,7 @@ var GSI = {
 };
 GSI.TEXT = GSITEXT;
 GSI.GPS = GSI.GPS || {};
-GSI.GPS.sharedState = { userInteraction: false };
+GSI.GPS.sharedState = { userInteraction: false, otherGPSButtons: [] };
 /************************************************************************
  モバイル判定
 ************************************************************************/
@@ -38220,6 +38220,7 @@ GSI.Control.GPSButton = L.Control.extend({
 
     this._on = true;
     this._startInitialized = false;
+    this._justStarted = true;
     if (!this._locationWatcher) {
       this._locationWatcher = new GSI.LocationWatcher();
       this._locationWatcher.on("change", L.bind(this._onLocationChange, this));
@@ -38246,15 +38247,14 @@ GSI.Control.GPSButton = L.Control.extend({
 
   _onLocationChange: function (evt) {
     var coords = evt["coords"];
-    this._selfMove = true;
     var zoom = this._map.getZoom();
+    this._selfMove = true;
     if (!this._startInitialized && zoom < 15) {
       this._startInitialized = true;
       this._map.flyTo([coords.latitude, coords.longitude], 15, { duration: 1 });
     } else {
       this._map.panTo([coords.latitude, coords.longitude], { reset: true });
     }
-    this._selfMove = false;
     this._showMarker(coords);
   },
   _onZoomStart: function () {
@@ -38265,12 +38265,20 @@ GSI.Control.GPSButton = L.Control.extend({
   },
 
   _onMoveStart: function (e) {
-    if (this._state.userInteraction) {
-      if (!this._selfMove && !this._zooming) {
-        this.stop();
+    if (this._justStarted) {
+      this._justStarted = false;
+      return;
+    }
+    if (this._state.userInteraction && !this._selfMove) {
+      this.stop();
+      if (this._state.otherGPSButtons) {
+        this._state.otherGPSButtons.forEach(function(button) {
+          if (button._on) {
+            button.stop();
+          }
+        });
       }
     }
-    this._selfMove = false;
   },
 
   _resetImage: function () {
@@ -38286,13 +38294,19 @@ GSI.Control.GPSButton = L.Control.extend({
   onAdd: function (map) {
     this._on = false;
     this._map = map;
-    this._state = this.options.sharedState || { userInteraction: false };
+    this._state = this.options.sharedState || { userInteraction: false, otherGPSButtons: [] };
 
+    if (!this._state.otherGPSButtons.includes(this)) {
+      this._state.otherGPSButtons.push(this);
+    }
     const container = map.getContainer();
     container.addEventListener("mousedown", () => { this._state.userInteraction = true; });
     container.addEventListener("touchstart", () => { this._state.userInteraction = true; });
 
-    this._map.on("moveend", () => { this._state.userInteraction = false; });
+    this._map.on("moveend", () => { 
+      this._state.userInteraction = false;
+      this._selfMove = false;
+    });
 
     this._map.on("movestart", L.bind(this._onMoveStart, this));
     this._map.on("zoomstart", L.bind(this._onZoomStart, this));
