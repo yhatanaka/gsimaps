@@ -21,8 +21,8 @@ jobs:
           sed -i '6a\ <link rel="apple-touch-icon" href="apple-touch-icon.png" />' index.html
           sed -i 's/<title>.*<\/title>/<title>地理院地図 \/ GSI Maps | 国土地理院<\/title>/' index.html
           sed -i '/GSI.GLOBALS.isCreditShow = true;/,+2d' index.html
-          sed -i 's/<div id="title_logo_upper">.*<\/div>/<div id="title_logo_upper">地理院地図<\/div>' index.html
-          sed -i 's/<div id="title_logo_lower">.*<\/div>/<div id="title_logo_lower">（電子国土WEB）<\/div>' index.html
+          sed -i 's/<div id="title_logo_upper">.*<\/div>/<div id="title_logo_upper">地理院地図<\/div>/' index.html
+          sed -i 's/<div id="title_logo_lower">.*<\/div>/<div id="title_logo_lower">（電子国土WEB）<\/div>/' index.html
 
           # index_m.html の修正
           sed -i 's/<title>.*<\/title>/<title>地理院地図 \/ GSI Maps\｜国土地理院<\/title>/' index_m.html
