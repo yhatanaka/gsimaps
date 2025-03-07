@@ -43,6 +43,11 @@ jobs:
       - name: 特定のファイルを除外
         run: |
           rm -f image/print/title.png
+          rm -rf .git .github
+          rm -f *.md LICENSE* .gitignore
+          rm -f package.json package-lock.json
+          rm -f .editorconfig .env .gitattributes
+          rm -f *.yml *.yaml
 
       - uses: aws-actions/configure-aws-credentials@v4
         if: ${{ env.DEPLOY_ROLE_ARN != '' }}
@@ -52,4 +57,4 @@ jobs:
 
       - name: S3バケットにデプロイ
         run: |
-          aws s3 sync . s3://${S3_DEPLOY_BUCKET_NAME}/
+          aws s3 cp . s3://${S3_DEPLOY_BUCKET_NAME}/ --recursive
