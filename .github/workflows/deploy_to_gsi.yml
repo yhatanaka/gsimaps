@@ -48,8 +48,6 @@ jobs:
         if: ${{ env.DEPLOY_ROLE_ARN != '' }}
         with:
           aws-region: ap-northeast-1
-          role-chaining: true
-          role-skip-session-tagging: true
           role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
 
       - name: S3バケットにデプロイ
