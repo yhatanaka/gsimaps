@@ -52,4 +52,4 @@ jobs:
 
       - name: S3バケットにデプロイ
         run: |
-          aws s3 sync . s3://${S3_DEPLOY_BUCKET_NAME}/ --delete
+          aws s3 sync . s3://${S3_DEPLOY_BUCKET_NAME}/
