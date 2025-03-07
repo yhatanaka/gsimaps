@@ -5,6 +5,9 @@ on:
     branches: [ gh-pages ]
 jobs:
   deploy:
+    permissions:
+      id-token: write
+      contents: read
     if: github.repository == 'gsimaps-cicd/gsimaps-internal'
     runs-on: ubuntu-latest
     env:
