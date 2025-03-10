@@ -24,7 +24,7 @@ jobs:
           # index.htmlの修正
           sed -i '6a\ <link rel="apple-touch-icon" href="apple-touch-icon.png" />' index.html
           sed -i 's/<title>.*<\/title>/<title>地理院地図 \/ GSI Maps | 国土地理院<\/title>/' index.html
-          sed -i '/<script type="text\/javascript">\s*GSI.GLOBALS.isCreditShow = true;\s*<\/script>/d' index.html
+          sed -i -z 's/<script type="text\/javascript">\s*GSI\.GLOBALS\.isCreditShow = true;\s*<\/script>//g' index.html
           sed -i 's/<div id="title_logo_upper">.*<\/div>/<div id="title_logo_upper">地理院地図<\/div>/' index.html
           sed -i 's/<div id="title_logo_lower">.*<\/div>/<div id="title_logo_lower">（電子国土WEB）<\/div>/' index.html
 
@@ -46,13 +46,14 @@ jobs:
         with:
           aws-region: ap-northeast-1
           role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
+          fetch-depth: 0
       - name: 変更ファイルの特定とS3デプロイ
         run: |
           # 除外したファイルのパターンを定義
           EXCLUDED_PATTERNS=(".git/*" ".github/*" "*.md" "LICENSE*" ".gitignore" "package.json" "package-lock.json" ".editorconfig" ".env" ".gitattributes" "*.yml" "*.yaml" "image/print/title.png")
           # 変更があったファイルをフィルタリングして直接デプロイ
           PATHS=()
-          git diff --diff-filter=AM --name-only HEAD origin/gh-pages | while read -r file; do
+          git diff --diff-filter=AM --name-only ${{ github.event.before }} ${{ github.sha }} | while read -r file; do
             # ファイルが存在し、除外パターンに一致しないかチェック
             if [ -f "$file" ]; then
               EXCLUDED=false
