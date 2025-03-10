@@ -3,6 +3,19 @@ name: 'GSIサーバーへのデプロイ'
 on:
   push:
     branches: [ gh-pages ]
+    paths-ignore:
+      - '.git/**'
+      - '.github/**'
+      - '*.md'
+      - 'LICENSE*'
+      - '.gitignore'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.editorconfig'
+      - '.env'
+      - '.gitattributes'
+      - '*.yml'
+      - '*.yaml'
 jobs:
   deploy:
     permissions:
