@@ -48,7 +48,7 @@ jobs:
 
           # index_m.html の修正
           sed -i 's/<title>.*<\/title>/<title>地理院地図 \/ GSI Maps\｜国土地理院<\/title>/' index_m.html
-          sed -i '/GSI.GLOBALS.isCreditShow = true;/,+2d' index_m.html
+          sed -i -z 's/<script type="text\/javascript">\s*GSI\.GLOBALS\.isCreditShow = true;\s*<\/script>//g' index_m.html
           sed -i 's/<div class="logoarea"><\/div>/<div class="logoarea"><a style="text-decoration:none;" href=""><img class="logoimage" src="image\/m_logo.jpg"><\/a><\/div>/' index_m.html
 
           # index_3d.html の修正
