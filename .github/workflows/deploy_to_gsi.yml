@@ -33,6 +33,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
+          fetch-depth: 0
       - name: HTMLファイルの内容を修正
         run: |
           # index.htmlの修正
@@ -60,7 +61,6 @@ jobs:
         with:
           aws-region: ap-northeast-1
           role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
-          fetch-depth: 0
       - name: 変更ファイルの特定とS3デプロイ
         run: |
           # 除外したファイルのパターンを定義
