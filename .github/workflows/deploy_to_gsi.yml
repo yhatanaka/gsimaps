@@ -63,26 +63,22 @@ jobs:
           role-to-assume: ${{ env.DEPLOY_ROLE_ARN }}
       - name: 変更ファイルの特定とS3デプロイ
         run: |
-          # 除外したファイルのパターンを定義
-          EXCLUDED_PATTERNS=(".git/*" ".github/*" "*.md" "LICENSE*" ".gitignore" "package.json" "package-lock.json" ".editorconfig" ".env" ".gitattributes" "*.yml" "*.yaml" "image/print/title.png")
           # 変更があったファイルをフィルタリングして直接デプロイ
           PATHS=()
           git diff --diff-filter=AM --name-only ${{ github.event.before }} ${{ github.sha }} | while read -r file; do
-            # ファイルが存在し、除外パターンに一致しないかチェック
             if [ -f "$file" ]; then
-              EXCLUDED=false
-              for pattern in "${EXCLUDED_PATTERNS[@]}"; do
-                if [[ "$file" == $pattern ]]; then
-                  EXCLUDED=true
-                  break
-                fi
-              done
-              if [ "$EXCLUDED" = false ]; then
+              # 除外ファイルの特定
+              if [[ "$file" == .git/* || "$file" == .github/* || "$file" == *.md || 
+                    "$file" == LICENSE* || "$file" == .gitignore || "$file" == package.json || 
+                    "$file" == package-lock.json || "$file" == .editorconfig || "$file" == .env || 
+                    "$file" == .gitattributes || "$file" == *.yml || "$file" == *.yaml || 
+                    "$file" == image/print/title.png ]]; then
+              else
                 # S3にアップロード
                 aws s3 cp "$file" "s3://${S3_DEPLOY_BUCKET_NAME}/$file"
                 PATHS+=("/$file")
+                echo "デプロイ: $file"
               fi
-              echo "デプロイが完了しました"
             else
               echo "変更があったファイルが存在しないのでスキップします"
             fi
