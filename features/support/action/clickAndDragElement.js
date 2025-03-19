@@ -17,11 +17,11 @@ module.exports = async function(selector, direction, pixels) {
       let y = bounding_box.y + bounding_box.height / 2;
       await page.mouse.move(x, y);
       await page.mouse.down();
-      await page.waitForTimeout(50);
+      await new Promise(resolve => setTimeout(resolve, 50));
       await page.mouse.move(x + deltaX, y + deltaY, { steps: 10 });
-      await page.waitForTimeout(50);
+      await new Promise(resolve => setTimeout(resolve, 50));
       await page.mouse.up();
-      await page.waitForTimeout(50);
+      await new Promise(resolve => setTimeout(resolve, 50));
 
     } catch (error) {
         failed = error;
