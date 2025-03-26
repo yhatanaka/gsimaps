@@ -1108,6 +1108,13 @@ CONFIG.CHIIKIMESH.GEOJSONURL = 'https://cyberjapandata.gsi.go.jp/xyz/chiikimesh/
 
 CONFIG.DEMURLLIST = [
   {
+    "title": "DEM1A",
+    "url": "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
+    "minzoom": 9,
+    "maxzoom": 17,
+    "fixed": 1
+  },
+  {
     "title": "DEM5A",
     "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
     "minzoom": 9,
@@ -1145,6 +1152,13 @@ CONFIG.DEMURLLIST = [
 ];
 
 CONFIG.FOOTERDEMURLLIST = [
+  {
+    "title": "DEM1A",
+    "url": "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
+    "minzoom": 17,
+    "maxzoom": 17,
+    "fixed": 1
+  },
   {
     "title": "DEM5A",
     "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",

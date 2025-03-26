@@ -26510,9 +26510,9 @@ GSI.MapManager = L.Evented.extend({
     // this._map.addControl(new GSI.Control.ZoomGuidePanel({ position: "bottomright" }, this.options.mapMenuRight ? "right" : "left"));
 
     if (CONFIG.USEGPS) {
-      this._gpsControl = new GSI.Control.GPSButton({ 
-        sharedState: GSI.GPS.sharedState 
-      }); 
+      this._gpsControl = new GSI.Control.GPSButton({
+        sharedState: GSI.GPS.sharedState
+      });
       this._map.addControl(this._gpsControl);
 
     }
@@ -33561,7 +33561,7 @@ GSI.CrossSectionViewDialog = GSI.Dialog.extend({
   // 初期化
   initialize: function (dialogManager, map, options) {
     this._map = map;
-    this._useDEMTileList = ["DEM5A", "DEM5B", "DEM5C", "DEM10B", "DEMGM"];
+    this._useDEMTileList = ["DEM1A","DEM5A", "DEM5B", "DEM5C", "DEM10B", "DEMGM"];
     this._crossSectionView = new GSI.CrossSectionView(this._map, {
       autoGraph: true
     });
@@ -33723,6 +33723,7 @@ GSI.CrossSectionViewDialog = GSI.Dialog.extend({
       return frame;
     }, this);
 
+    this._optionFrame.append(__createOption("DEM1A"));
     this._optionFrame.append(__createOption("DEM5A"));
     this._optionFrame.append(__createOption("DEM5B"));
     this._optionFrame.append(__createOption("DEM5C"));
@@ -33911,7 +33912,7 @@ GSI.CrossSectionViewDisplayDialog = GSI.Dialog.extend({
           + list[i];
       }
     } else {
-      text = "DEM5A,DEM5B,DEM5C,DEM10B,DEMGM";
+      text = "DEM1A,DEM5A,DEM5B,DEM5C,DEM10B,DEMGM";
     }
     this._titleTextContainer.html("データ:" + text);
   },
@@ -37012,7 +37013,7 @@ GSI.DEMLoader = L.Evented.extend({
     }
 
     if (!this.options.useTileList) {
-      this.options.useTileList = ["DEM5A", "DEM5B", "DEM5C", "DEM10B", "DEMGM"];
+      this.options.useTileList = ["DEM1A","DEM5A", "DEM5B", "DEM5C", "DEM10B", "DEMGM"];
     }
 
     var useTileList = this.options.useTileList;
@@ -37821,6 +37822,38 @@ GSI.DEMLoader.getURLList = function (x, y, z) {
   if (!GSI.DEMLoader.DEMAREA2[key])
     return [
       {
+        id: "DEM1A",
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
+        minZoom: 9,
+        maxZoom: 17,
+        complementList: [
+          {
+            id: "DEM5A",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM5B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM5C",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM10B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 14
+          }
+        ]
+      },
+      {
         id: "DEM5A",
         url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
         minZoom: 9,
@@ -38084,6 +38117,38 @@ GSI.FreeReliefDEMLoader.getURLList = function(x, y, z){
   if (!GSI.DEMLoader.DEMAREA2[key])
     return [
       {
+        id: "DEM1A",
+        url: "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
+        minZoom: 9,
+        maxZoom: 17,
+        complementList: [
+          {
+            id: "DEM5A",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM5B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5b_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM5C",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem5c_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 15
+          },
+          {
+            id: "DEM10B",
+            url: "https://cyberjapandata.gsi.go.jp/xyz/dem_png/{z}/{x}/{y}.png",
+            minZoom: 9,
+            maxZoom: 14
+          }
+        ]
+      },
+      {
         id: "DEM5A",
         url: "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
         minZoom: 9,
@@ -38303,7 +38368,7 @@ GSI.Control.GPSButton = L.Control.extend({
     container.addEventListener("mousedown", () => { this._state.userInteraction = true; });
     container.addEventListener("touchstart", () => { this._state.userInteraction = true; });
 
-    this._map.on("moveend", () => { 
+    this._map.on("moveend", () => {
       this._state.userInteraction = false;
       this._selfMove = false;
     });
@@ -47586,7 +47651,7 @@ GSI.MapListPanel = GSI.MapPanelContainer.extend({
       li.append(descriptionBtn);
       descriptionBtn.off('click').on('click', L.bind(this._onLayerMouseEnter, this, a, item));
     }
-    
+
     if (CONFIG.VISIBLELAYERTYPE) {
       var info = $('<div>').addClass('info');
       if (item.cocotile) {
