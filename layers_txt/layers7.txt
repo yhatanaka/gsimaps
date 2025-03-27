@@ -5187,6 +5187,33 @@
                 },
                 {
                   "type": "LayerGroup",
+                  "title": "2025年3月更新",
+                  "toggleall": false,
+                  "entries": [
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem1a_update_2025_03",
+                      "title": "1ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem1a_update_2025_03/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    },
+                    {
+                      "type": "Layer",
+                      "id": "fgd_dem5a_update_2025_03",
+                      "title": "5ｍメッシュDEM（航空レーザ測量）",
+                      "url": "https://maps.gsi.go.jp/xyz/fgd_dem5a_update_2025_03/{z}/{x}/{y}.geojson",
+                      "cocotile": true,
+                      "minZoom": 2,
+                      "maxZoom": 14,
+                      "maxNativeZoom": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "LayerGroup",
                   "title": "2024年7月更新",
                   "toggleall": false,
                   "entries": [
