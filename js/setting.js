@@ -341,6 +341,54 @@ CONFIG.CONFIRM_LAYERS = {
       "kokuarea"
     ]
   },
+  "kokuarea_kanseikentou": { // このグループの一意のID
+    "title": "留意事項", // 確認ダイアログに表示するタイトル
+
+    // 表示するメッセージ
+    "message": "航空法第132条の85第1項第1号に規定する無人航空機の飛行禁止空域を飛行させる場合は、空域を管轄する管制機関等との調整が必要です。青色の空域は、航空交通管制圏又は航空交通情報圏を表します。<br><br>" +
+      "なお、この情報には誤差が含まれている場合があります。境界付近等、飛行範囲が複数の空域に係る可能性がある場合は、管轄する管制機関等に確認願います。<br>" +
+      "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。",
+    "withBlend": false, // 合成するかどうか
+    "layers": [ // レイヤーのIDを配列で指定
+      "kokuarea_kanseikentou"
+    ]
+  },
+  "kokuarea_tokubetsukanseiku": { // このグループの一意のID
+    "title": "留意事項", // 確認ダイアログに表示するタイトル
+
+    // 表示するメッセージ
+    "message": "航空法第132条の85第1項第1号に規定する無人航空機の飛行禁止空域を飛行させる場合は、空域を管轄する管制機関等との調整が必要です。青色の空域は、特別管制区を表します。<br><br>" +
+      "なお、この情報には誤差が含まれている場合があります。境界付近等、飛行範囲が複数の空域に係る可能性がある場合は、管轄する管制機関等に確認願います。<br>" +
+      "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。",
+    "withBlend": false, // 合成するかどうか
+    "layers": [ // レイヤーのIDを配列で指定
+      "kokuarea_tokubetsukanseiku"
+    ]
+  },
+  "kokuarea_shinnyuukanseiku": { // このグループの一意のID
+    "title": "留意事項", // 確認ダイアログに表示するタイトル
+
+    // 表示するメッセージ
+    "message": "航空法第132条の85第1項第1号に規定する無人航空機の飛行禁止空域を飛行させる場合は、空域を管轄する管制機関等との調整が必要です。青色の空域は、進入管制区を表します。<br><br>" +
+      "なお、この情報には誤差が含まれている場合があります。境界付近等、飛行範囲が複数の空域に係る可能性がある場合は、管轄する管制機関等に確認願います。<br>" +
+      "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。",
+    "withBlend": false, // 合成するかどうか
+    "layers": [ // レイヤーのIDを配列で指定
+      "kokuarea_shinnyuukanseiku"
+    ]
+  },
+  "kokuarea_minkankunren": { // このグループの一意のID
+    "title": "留意事項", // 確認ダイアログに表示するタイトル
+
+    // 表示するメッセージ
+    "message": "航空法第132条の85第1項第1号に規定する無人航空機の飛行禁止空域を飛行させる場合は、空域を管轄する管制機関等との調整が必要です。青色の空域は、民間訓練試験空域（訓練空域）を表します。<br><br>" +
+      "なお、この情報には誤差が含まれている場合があります。境界付近等、飛行範囲が複数の空域に係る可能性がある場合は、管轄する管制機関等に確認願います。<br>" +
+      "詳細については、<a target='_blank' href='http://www.mlit.go.jp/koku/koku_tk10_000003.html'>国土交通省ホームページ</a>で確認してください。",
+    "withBlend": false, // 合成するかどうか
+    "layers": [ // レイヤーのIDを配列で指定
+      "kokuarea_minkankunren"
+    ]
+  },
   "red": {
     "title": "ご利用上の注意",
     "message": "赤色立体地図及びオルソ立体地図はアジア航測株式会社の特許（第3670274号等）を使用して作成したものです。" +
@@ -1108,13 +1156,6 @@ CONFIG.CHIIKIMESH.GEOJSONURL = 'https://cyberjapandata.gsi.go.jp/xyz/chiikimesh/
 
 CONFIG.DEMURLLIST = [
   {
-    "title": "DEM1A",
-    "url": "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
-    "minzoom": 9,
-    "maxzoom": 17,
-    "fixed": 1
-  },
-  {
     "title": "DEM5A",
     "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
     "minzoom": 9,
@@ -1152,13 +1193,6 @@ CONFIG.DEMURLLIST = [
 ];
 
 CONFIG.FOOTERDEMURLLIST = [
-  {
-    "title": "DEM1A",
-    "url": "https://cyberjapandata.gsi.go.jp/xyz/dem1a_png/{z}/{x}/{y}.png",
-    "minzoom": 17,
-    "maxzoom": 17,
-    "fixed": 1
-  },
   {
     "title": "DEM5A",
     "url": "https://cyberjapandata.gsi.go.jp/xyz/dem5a_png/{z}/{x}/{y}.png",
