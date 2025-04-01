@@ -1779,6 +1779,17 @@
           "maxZoom": 16,
           "maxNativeZoom": 14,
           "html": "<div class='layer_text'><p>起伏がよくわかる地図です。アジア航測株式会社の特許（第3670274号等）を使用して作成したものです。<br>赤色立体地図を利用される場合は、<a target=\"_blank\" href=\"http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html#01\">国土地理院コンテンツ利用規約</a>に記載のとおり、<a target=\"_blank\" href=\"https://www.rrim.jp/researcher/\">アジア航測株式会社の許諾条件</a>を確認してご利用ください。</p></div>"
+        },
+        {
+          "type": "Layer",
+          "id": "jpgeo2024",
+          "title": "ジオイド2024 日本とその周辺",
+          "url": "https://maps.gsi.go.jp/xyz/jpgeo2024/{z}/{x}/{y}.png",
+          "cocotile": true,
+          "minZoom": 3,
+          "maxZoom": 9,
+          "maxNativeZoom": 9,
+          "html": "<div class='layer_text'>ズームレベル3～9で表示</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://maps.gsi.go.jp/legend/attention_slopezone1map.pdf\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><img src='https://maps.gsi.go.jp/legend/JPGEO2024_legend.png' alt='' width='50%' height='50%'>"
         }
       ]
     }
