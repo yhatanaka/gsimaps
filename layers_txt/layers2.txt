@@ -3,7 +3,7 @@
     {
       "type": "LayerGroup",
       "title": "標高・土地の凹凸",
-      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/kifuku.png",      
+      "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/kifuku.png",
       "html" : "<div class='layer_text'>色や陰影で標高や土地の凹凸が直感的に分かる地図などを閲覧できます。</div>",
       "toggleall": false,
       "entries": [
@@ -1789,10 +1789,10 @@
           "minZoom": 3,
           "maxZoom": 9,
           "maxNativeZoom": 9,
-          "html": "<div class='layer_text'>ズームレベル3～9で表示</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://maps.gsi.go.jp/legend/attention_slopezone1map.pdf\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><img src='https://maps.gsi.go.jp/legend/JPGEO2024_legend.png' alt='' width='50%' height='50%'>"
+          "html": "<div class='layer_text'>ズームレベル3～9で表示</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://www.gsi.go.jp/buturisokuchi/grageo_geoid.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><img src='https://maps.gsi.go.jp/legend/JPGEO2024_legend.png' alt='' width='50%' height='50%'>"
         }
       ]
     }
-    
+
   ]
 }
