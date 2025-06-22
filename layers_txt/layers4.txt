@@ -210,32 +210,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "LayerGroup",
-          "title": "干渉SAR",
-          "html": "<div class='layer_text'><p>地震や火山活動等による地盤変動の様子を表示します。</p></div>",
-          "toggleall": false,
-          "entries": [
-            {
-              "type": "LayerGroup",
-              "title": "だいち2号（ALOS-2）",
-              "toggleall": false,
-              "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_pub_alos2.txt"
-            },
-            {
-              "type": "LayerGroup",
-              "title": "だいち（ALOS）",
-              "toggleall": false,
-              "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_pub_alos.txt"
-            },
-            {
-              "type": "LayerGroup",
-              "title": "時系列解析",
-              "toggleall": false,
-              "src": "https://maps.gsi.go.jp/sar/layers_txt/layers_pub_tsa.txt"
-            }
-          ]
         }
       ]
     }
