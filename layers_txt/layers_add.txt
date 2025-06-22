@@ -3,8 +3,8 @@
     {
       "type": "Layer",
       "id": "chokai-tobishima",
-      "title": "応急復旧対策基図",
-      "url": "https://yhatanaka.github.io/gsimaps/chokai-tobishima/{z}/{x}/{y}.png",
+      "title": "鳥海山・飛島",
+      "url": "https://yhatanaka.github.io/gsimaps/chokai-tobishima/{z}/{x}/{y}.jpg",
       "cocotile": false,
       "minZoom": 10,
       "maxZoom": 15,
