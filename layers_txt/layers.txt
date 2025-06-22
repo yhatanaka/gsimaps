@@ -18,9 +18,6 @@
 		"url":"./layers5.txt"
 	},
 	{
-		"url":"./layers6.txt"
-	},
-	{
 		"url":"./layers7.txt"
 	}
 ]
