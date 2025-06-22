@@ -76,7 +76,7 @@ CONFIG.UI.MENU = [
             typeA: 'check',
             defaultCheck: false
           }/*,
-          
+
           {
             id: CONFIG.PARAMETERNAMES.KOKUDOKIHONZUKAKU,
             title: '国土基本図図郭',
@@ -212,7 +212,7 @@ CONFIG.UI.MENU = [
             title: '<span style="font-size:13pt;">大</span><br><span style="font-size:9px;">縦横2048px</span>',
             description : "2048×2048ピクセルの3Dモデルを作成します"
           },
-  
+
           {
             id: 'gsi3d_s',
             title: '<span style="font-size:13pt;">小</span><br><span style="font-size:9px;">縦横1024px</span>',
@@ -314,7 +314,7 @@ CONFIG.UI.MENU = [
     target : "_blank",
     url : "https://maps.gsi.go.jp/help/"
   },
-
+/*
   {
     id : "gsivector",
     title : "",
@@ -322,5 +322,5 @@ CONFIG.UI.MENU = [
     class : "gsi-header-tool-vectorlogo-icon",
     description : "地理院地図Vectorへジャンプ"
   }
-
+*/
 ];
