@@ -1,0 +1,15 @@
+{
+  "layers": [
+    {
+      "type": "Layer",
+      "id": "chokai-tobishima",
+      "title": "応急復旧対策基図",
+      "url": "https://yhatanaka.github.io/gsimaps/chokai-tobishima/{z}/{x}/{y}.png",
+      "cocotile": false,
+      "minZoom": 10,
+      "maxZoom": 15,
+      "legendUrl": "https://maps.gsi.go.jp/legend/fukkyukizu_legend.pdf",
+      "html": "<div class=\"gsi_layerinfo_title\">応急復旧対策基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kanri/kanri61002.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
+    }
+  ]
+}
