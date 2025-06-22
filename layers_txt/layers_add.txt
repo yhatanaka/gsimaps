@@ -4,7 +4,7 @@
       "type": "Layer",
       "id": "chokai-tobishima",
       "title": "鳥海山・飛島",
-      "url": "https://yhatanaka.github.io/gsimaps/chokai-tobishima/{z}/{x}/{y}.jpg",
+      "url": "https://yhatanaka.github.io/gsimaps/chokai-tobishima/{z}/{x}/{y}.png",
       "cocotile": false,
       "minZoom": 10,
       "maxZoom": 15,
